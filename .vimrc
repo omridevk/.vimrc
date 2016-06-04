@@ -6,6 +6,6 @@ source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
 try
-source ~/.vim/my_config.vim
+source ~/.vim/my_configs.vim
 catch
 endtry

@@ -6,10 +6,6 @@ call pathogen#helptags()
 
 "---------- VISUALS ------------"
 
-set t_CO=256
-syntax enable
-set background=dark
-colorscheme solarized
 
 "---------- GLOBAL -------------"
 
@@ -22,11 +18,23 @@ set number                              "show line numbers"
 set hlsearch                            "set highlight search"
 set incsearch                           "automatically move to first occurrence of the search result"
 
+
+
+"---------- SPLIT --------------"
+
+set splitbelow
+set splitright
+
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
 "---------- MAPPINGS -----------"
 
 
 "use leader ev to edit the vimrc in a new tab "
-nmap <Leader>ev :tabedit ~/.vim/my_config.vim<cr>   
+nmap <Leader>ev :tabedit ~/.vim/my_configs.vim<cr>   
 
 "comma space to remove highlighted search"
 nmap <Leader><space> :nohlsearch<cr>
@@ -37,5 +45,5 @@ nmap <Leader><space> :nohlsearch<cr>
 
 augroup autosourcing
     autocmd!
-    autocmd BufWritePost my_config.vim source %
+    autocmd BufWritePost my_configs.vim source %
 augroup END
